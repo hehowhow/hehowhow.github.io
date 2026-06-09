@@ -6,9 +6,9 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Lorem ipsum"
-description              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. "
-repository               : "RayeRen/acad-homepage.github.io"
+title                    : "Hao (Levi) He, 何皓"
+description              : "Hao currently is pursuing his PhD in the Faculty of Computing, Harbin Institute of Technology, advised by Prof. Ying Ma."
+repository               : "hehowhow/hehowhow.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -21,14 +21,14 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Lorem ipsum"
-  avatar           : "images/android-chrome-512x512.png"
-  bio              : "Lorem ipsum College"
-  location         : "Beijing, China"
+  name             : "Hao (Levi) He, 何皓"
+  avatar           : "/images/zjz.png"
+  bio              : "Harbin Institute of Technology"
+  location         : "Harbin, China"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "Lorem@ipsum.com"
+  email            : "hehao@stu.hit.edu.cn"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -60,6 +60,7 @@ author:
 
 
 # Reading Files
+# 说明：Jekyll 默认不会把 _posts 子目录里的图片复制到站点；图片请放在 assets/images/posts/<与博文相同的 slug>/ 下。
 include:
   - .htaccess
   - _pages
@@ -126,6 +127,14 @@ defaults:
     values:
       layout: default
       author_profile: true
+  # _posts (blog)
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: default
+      author_profile: true
+      permalink: /blog/:year/:month/:day/:title/
 
 
 # Sass/SCSS
