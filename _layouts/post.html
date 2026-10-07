@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% assign topic = site.data.blog_categories | where: "id", page.topic | first %}
+{% assign child = topic.children | where: "id", page.subtopic | first %}
+{% assign upload_date = page.uploaded_at | default: page.date %}
+<div class="blog-post" lang="zh-CN">
+  <nav class="blog-post__breadcrumb" aria-label="文章位置">
+    <a href="{{ '/blog/' | relative_url }}{% if topic %}?category={{ topic.id | url_encode }}{% if child %}&amp;subcategory={{ child.id | url_encode }}{% endif %}{% endif %}" target="_self">← 返回{% if topic %}{{ topic.title | escape }}{% else %}文章列表{% endif %}</a>{% if child %}<span aria-hidden="true">/</span><span>{{ child.title | escape }}</span>{% endif %}
+  </nav>
+  <header class="blog-post__header">
+    <time class="blog-entry__date" datetime="{{ upload_date | date_to_xmlschema }}" aria-label="上传日期 {{ upload_date | date: '%Y-%m-%d' }}"><span>上传日期</span>{{ upload_date | date: "%Y-%m-%d" }}</time>
+    <div><h1>{{ page.title | escape }}</h1>{% if page.tags.size > 0 %}<div class="blog-entry__tags">{% for tag in page.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div>{% endif %}</div>
+  </header>
+  <div class="blog-post__content">{{ content }}</div>
+</div>

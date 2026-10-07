@@ -1,0 +1,24 @@
+# Add a top-level item or a child here; the page and filters follow automatically.
+# Keep IDs stable: posts and shareable URLs refer to them.
+- id: basics
+  title: 基础知识
+  description: 概念梳理与技术实践
+  children: []
+
+- id: recommendation
+  title: 推荐系统论文
+  description: 推荐算法与系统研究
+  children:
+    - id: industry
+      title: 工业论文
+    - id: academia
+      title: 学界论文
+
+- id: llm
+  title: 大模型论文
+  description: 语言模型与前沿进展
+  children:
+    - id: industry
+      title: 工业论文
+    - id: academia
+      title: 学界论文

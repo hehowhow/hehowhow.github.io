@@ -132,7 +132,8 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: default
+      layout: post
+      lang: zh-CN
       author_profile: true
       permalink: /blog/:year/:month/:day/:title/
 

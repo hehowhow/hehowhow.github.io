@@ -33,6 +33,7 @@
 @import "page";
 @import "archive";
 @import "sidebar";
+@import "blog";
 
 @import "vendor/font-awesome/fontawesome";
 @import "vendor/font-awesome/solid";
@@ -106,19 +107,4 @@ h1:before, .anchor:before {
     color: white;
     background-color: #00369f;
     font-size: .8em;
-}
-
-/* 博客列表左对齐 - 移除 archive 的 prefix 左边距，使 archive__item 贴左 */
-.page__content .blog-archive {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-  text-align: left !important;
-
-  .archive__item,
-  .archive__item-title,
-  .archive__item-title a,
-  .page__meta,
-  .archive__item * {
-    text-align: left !important;
-  }
 }
